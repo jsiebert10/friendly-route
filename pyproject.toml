@@ -1,0 +1,60 @@
+[project]
+name = "my_project"
+requires-python = ">=3.10"
+
+# =========================
+# Ruff configuration
+# =========================
+[tool.ruff]
+src = ["src"]
+exclude = [
+    ".env/*",
+    "venv/*",
+    "*/.ipynb_checkpoints/*",
+    "*/data_science/*",
+]
+line-length = 100
+indent-width = 4
+target-version = "py310"
+extend-include = ["**.ipynb", "**/notebooks"]
+output-format = "concise"
+
+[tool.ruff.lint]
+pycodestyle.max-line-length = 100
+pydocstyle.convention = "numpy"
+mccabe.max-complexity = 50
+
+select = [
+    "E",
+    "F",
+    "UP",
+    "B",
+    "SIM",
+    "I",
+    "D101",
+    "D102",
+    "D103",
+    "C90",
+    "PL",
+    "ERA",
+    "A",
+    "C4",
+    "T20",
+    "RUF",
+]
+
+ignore = [
+    "PLR0912",
+    "PLR0913",
+    "PLR2004",
+    "PLR0915",
+    "E501",
+    "ERA001",
+    "F841",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["T201", "F401"]
+
+[tool.ruff.format]
+docstring-code-format = true
