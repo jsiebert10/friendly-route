@@ -1,0 +1,11 @@
+pandas>=2.0
+numpy>=1.24
+networkx>=3.0
+matplotlib>=3.7
+networkx>=3.0
+osmnx>=1.9
+geopandas
+shapely
+jupyter
+ipykernel
+scikit-learn
