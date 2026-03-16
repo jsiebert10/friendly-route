@@ -8,3 +8,4 @@ geopandas
 shapely
 jupyter
 ipykernel
+scikit-learn
