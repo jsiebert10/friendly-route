@@ -127,3 +127,8 @@ class StreetGraph:
 
         self.G_proj.add_edge(u, node_id, **{**attrs, "length": line_u.length, "geometry": line_u})
         self.G_proj.add_edge(node_id, v, **{**attrs, "length": line_v.length, "geometry": line_v})
+
+
+def geocode_address(self, address: str) -> tuple[float, float]:
+    lat, lon = ox.geocode(address)
+    return lat, lon
